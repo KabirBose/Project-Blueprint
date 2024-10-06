@@ -1,3 +1,4 @@
+import Button from "@/components/button/button";
 import Image from "next/image";
 
 export default function Page() {
@@ -13,6 +14,8 @@ export default function Page() {
           courses on time. Developed with a fast and simple "drag and drop"
           interface in mind.
         </p>
+        <br />
+        <Button text="Get Started" />
       </div>
       <Image
         src="/vectors/students.svg"
