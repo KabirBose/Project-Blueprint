@@ -1,5 +1,6 @@
 import Button from "@/components/button/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -15,7 +16,10 @@ export default function Page() {
           interface in mind.
         </p>
         <br />
-        <Button text="Get Started" />
+
+        <Link href={"/onboarding"}>
+          <Button text="Get Started" />
+        </Link>
       </div>
       <Image
         src="/vectors/students.svg"
