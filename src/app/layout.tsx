@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
+
+const pilcrowRounded = localFont({
+  src: "../fonts/pilcrow-rounded.ttf",
+  variable: "--font-pilcrow-rounded",
+});
 
 export const metadata: Metadata = {
   title: "Project Blueprint",
@@ -13,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${pilcrowRounded.variable} font-pilcrow`}>
+        {children}
+      </body>
     </html>
   );
 }
