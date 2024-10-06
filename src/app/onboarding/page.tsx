@@ -20,34 +20,34 @@ export default function Page() {
         </div>
 
         <div className="flex flex-col w-64">
-          <label htmlFor="name" className="font-medium">
+          <label htmlFor="school" className="font-medium">
             University/College
           </label>
           <input
             type="text"
-            name="name"
+            name="school"
             className="bg-gray-100 px-3 py-2 rounded-sm"
           />
         </div>
 
         <div className="flex flex-col w-64">
-          <label htmlFor="name" className="font-medium">
+          <label htmlFor="student-email" className="font-medium">
             Student Email
           </label>
           <input
-            type="text"
-            name="name"
+            type="email"
+            name="student-email"
             className="bg-gray-100 px-3 py-2 rounded-sm"
           />
         </div>
 
         <div className="flex flex-col w-64">
-          <label htmlFor="name" className="font-medium">
+          <label htmlFor="student-number" className="font-medium">
             Student Number
           </label>
           <input
-            type="text"
-            name="name"
+            type="number"
+            name="student-number"
             className="bg-gray-100 px-3 py-2 rounded-sm"
           />
         </div>
