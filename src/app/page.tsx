@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <section className="bg-blue-600 text-white h-[100vh] flex flex-row-reverse justify-center items-center">
+    <section className="h-[100vh] flex flex-row-reverse justify-center items-center">
       <div className="w-1/2">
         <h1 className="font-bold text-3xl drop-shadow-xl">
           The modern schedule builder for colleges and universities.

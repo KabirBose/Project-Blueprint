@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        pilcrow: ["var(--font-pilcrow-rounded)"],
+        general: ["var(--font-general)"],
       },
       colors: {
         background: "hsl(var(--background))",

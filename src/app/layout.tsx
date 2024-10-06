@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+
 import Navbar from "@/components/navbar/navbar";
 
-const pilcrowRounded = localFont({
-  src: "../fonts/pilcrow-rounded.ttf",
-  variable: "--font-pilcrow-rounded",
+const generalSans = localFont({
+  src: "../fonts/general-sans.ttf",
+  variable: "--font-general",
 });
 
 export const metadata: Metadata = {
@@ -20,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${pilcrowRounded.variable} font-pilcrow`}>
+      <body className={`${generalSans.variable} font-general`}>
         <Navbar />
         {children}
       </body>
