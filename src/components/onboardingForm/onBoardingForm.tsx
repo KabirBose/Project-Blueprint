@@ -11,10 +11,8 @@ export default function OnBoardingForm() {
         </label>
         <input
           type="text"
-          name="name"
           id="name"
           className="bg-gray-100 px-3 py-2 rounded-sm"
-          autoComplete="off"
         />
       </div>
 
@@ -24,36 +22,30 @@ export default function OnBoardingForm() {
         </label>
         <input
           type="text"
-          name="school"
           id="school"
           className="bg-gray-100 px-3 py-2 rounded-sm"
-          autoComplete="off"
         />
       </div>
 
       <div className="flex flex-col w-64">
-        <label htmlFor="student-email" className="font-medium">
+        <label htmlFor="email" className="font-medium">
           Student Email
         </label>
         <input
           type="email"
-          name="student-email"
-          id="student-email"
+          id="email"
           className="bg-gray-100 px-3 py-2 rounded-sm"
-          autoComplete="off"
         />
       </div>
 
       <div className="flex flex-col w-64">
-        <label htmlFor="student-number" className="font-medium">
+        <label htmlFor="studentNum" className="font-medium">
           Student Number
         </label>
         <input
           type="number"
-          name="student-number"
-          id="student-number"
+          id="studentNum"
           className="bg-gray-100 px-3 py-2 rounded-sm"
-          autoComplete="off"
         />
       </div>
 
