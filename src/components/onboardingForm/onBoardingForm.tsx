@@ -8,45 +8,53 @@ export default function OnBoardingForm() {
       <div className="flex flex-col w-64">
         <label htmlFor="name" className="font-medium">
           Full Name
-          <input
-            type="text"
-            name="name"
-            className="bg-gray-100 px-3 py-2 rounded-sm"
-          />
         </label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          className="bg-gray-100 px-3 py-2 rounded-sm"
+          autoComplete="off"
+        />
       </div>
 
       <div className="flex flex-col w-64">
         <label htmlFor="school" className="font-medium">
           University/College
-          <input
-            type="text"
-            name="school"
-            className="bg-gray-100 px-3 py-2 rounded-sm"
-          />
         </label>
+        <input
+          type="text"
+          name="school"
+          id="school"
+          className="bg-gray-100 px-3 py-2 rounded-sm"
+          autoComplete="off"
+        />
       </div>
 
       <div className="flex flex-col w-64">
         <label htmlFor="student-email" className="font-medium">
           Student Email
-          <input
-            type="email"
-            name="student-email"
-            className="bg-gray-100 px-3 py-2 rounded-sm"
-          />
         </label>
+        <input
+          type="email"
+          name="student-email"
+          id="student-email"
+          className="bg-gray-100 px-3 py-2 rounded-sm"
+          autoComplete="off"
+        />
       </div>
 
       <div className="flex flex-col w-64">
         <label htmlFor="student-number" className="font-medium">
           Student Number
-          <input
-            type="number"
-            name="student-number"
-            className="bg-gray-100 px-3 py-2 rounded-sm"
-          />
         </label>
+        <input
+          type="number"
+          name="student-number"
+          id="student-number"
+          className="bg-gray-100 px-3 py-2 rounded-sm"
+          autoComplete="off"
+        />
       </div>
 
       <Button text="Submit" />
