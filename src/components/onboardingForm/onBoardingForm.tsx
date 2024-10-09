@@ -3,6 +3,30 @@
 import Button from "../button/button";
 
 export default function OnBoardingForm() {
+  const handleSubmit = async () => {
+    try {
+      const response = await fetch("/api/addUser", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: "Jacker Krabs",
+          email: "lulu@gmail.com",
+          school: "Krusty Jab",
+          studentNum: 84275613,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to add user");
+      }
+
+      const data = await response.json();
+      console.log("User added:", data);
+    } catch (error) {
+      console.error("Error adding user:", error);
+    }
+  };
+
   return (
     <form className="flex flex-col gap-4 bg-gray-50 w-fit p-10 rounded-md drop-shadow-xl">
       <div className="flex flex-col w-64">
@@ -49,6 +73,7 @@ export default function OnBoardingForm() {
         />
       </div>
 
+      <button onClick={handleSubmit}>Click moi</button>
       <Button text="Submit" />
     </form>
   );
