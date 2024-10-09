@@ -1,18 +1,26 @@
 "use client";
 
+import React, { useState } from "react";
 import Button from "../button/button";
 
 export default function OnBoardingForm() {
-  const handleSubmit = async () => {
+  const [name, setName] = useState<string>();
+  const [email, setEmail] = useState<string>();
+  const [school, setSchool] = useState<string>();
+  const [studentNum, setStudentNum] = useState<number>();
+
+  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+
     try {
       const response = await fetch("/api/addUser", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: "Jacker Krabs",
-          email: "lulu@gmail.com",
-          school: "Krusty Jab",
-          studentNum: 84275613,
+          name: name,
+          email: email,
+          school: school,
+          studentNum: Number(studentNum),
         }),
       });
 
@@ -37,6 +45,10 @@ export default function OnBoardingForm() {
           type="text"
           id="name"
           className="bg-gray-100 px-3 py-2 rounded-sm"
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setName(e.target.value)
+          }
+          value={name}
         />
       </div>
 
@@ -48,6 +60,10 @@ export default function OnBoardingForm() {
           type="text"
           id="school"
           className="bg-gray-100 px-3 py-2 rounded-sm"
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setSchool(e.target.value)
+          }
+          value={school}
         />
       </div>
 
@@ -59,6 +75,10 @@ export default function OnBoardingForm() {
           type="email"
           id="email"
           className="bg-gray-100 px-3 py-2 rounded-sm"
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setEmail(e.target.value)
+          }
+          value={email}
         />
       </div>
 
@@ -70,11 +90,14 @@ export default function OnBoardingForm() {
           type="number"
           id="studentNum"
           className="bg-gray-100 px-3 py-2 rounded-sm"
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setStudentNum(Number(e.target.value))
+          }
+          value={studentNum}
         />
       </div>
 
-      <button onClick={handleSubmit}>Click moi</button>
-      <Button text="Submit" />
+      <Button text="Submit" onClick={handleSubmit} />
     </form>
   );
 }

@@ -7,7 +7,6 @@ export async function POST(request: Request) {
   try {
     const { name, email, school, studentNum } = await request.json();
 
-    // Add the user to the database
     const newUser = await prisma.user.create({
       data: {
         name,

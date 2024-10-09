@@ -1,7 +1,9 @@
+import React from "react";
+
 interface Props {
   className?: string;
   text: string;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export default function Button({ className, text, onClick }: Props) {
