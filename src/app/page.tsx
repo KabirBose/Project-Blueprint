@@ -2,7 +2,7 @@ import Button from "@/components/button/button";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Page() {
+export default function Home() {
   return (
     <section className="h-[100vh] flex flex-row-reverse justify-center items-center gap-16">
       <div className="w-1/2">

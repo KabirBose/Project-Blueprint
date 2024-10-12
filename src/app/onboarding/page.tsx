@@ -1,6 +1,6 @@
 import OnBoardingForm from "@/components/onboardingForm/onBoardingForm";
 
-export default function Page() {
+export default function Onboarding() {
   return (
     <div className="flex justify-center items-center flex-col h-[100vh] gap-12">
       <h1 className="font-bold text-3xl drop-shadow-xl">
