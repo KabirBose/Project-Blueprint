@@ -2,12 +2,15 @@
 
 import React, { useState } from "react";
 import Button from "../button/button";
+import { useRouter } from "next/navigation";
 
 export default function OnBoardingForm() {
   const [name, setName] = useState<string>();
   const [email, setEmail] = useState<string>();
   const [school, setSchool] = useState<string>();
   const [studentNum, setStudentNum] = useState<number>();
+
+  const router = useRouter();
 
   const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -29,7 +32,9 @@ export default function OnBoardingForm() {
       }
 
       const data = await response.json();
-      console.log("User added:", data);
+      console.log(data);
+
+      router.push("/builder");
     } catch (error) {
       console.error("Error adding user:", error);
     }
