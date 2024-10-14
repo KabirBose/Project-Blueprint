@@ -6,13 +6,12 @@ export default function Navbar() {
       <div className="flex justify-between items-center gap-4 w-full bg-black text-white p-6 shadow-lg rounded-md">
         <div className="flex gap-4">
           <Link href={"/"}>Home</Link>
-          <Link href={""}>About</Link>
-          <Link href={""}>Contact</Link>
+          <Link href={"/about"}>About</Link>
+          <Link href={"/contact"}>Contact</Link>
         </div>
 
         <div className="flex gap-4">
-          <Link href={""}>Sign Up</Link>
-          <Link href={""}>Login</Link>
+          <Link href={"/onboarding"}>Get Started</Link>
         </div>
       </div>
     </nav>
