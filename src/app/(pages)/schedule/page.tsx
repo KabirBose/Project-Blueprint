@@ -17,7 +17,7 @@ export default function Schedule() {
 
       <div className="bg-gray-100 h-[80vh] mt-10 grid grid-cols-5 grid-rows-10">
         {[...Array(50)].map((item, i) => (
-          <div className="border border-black">
+          <div className="border border-black" key={i}>
             {i % 5 === 0 && i > 0 && "Time"}
             {i >= 0 && i <= 4 && weekdays[i]}
           </div>
